@@ -9,4 +9,8 @@ export type AppStateType = ReturnType<typeof rootReducer>
 
 export const store = createStore(rootReducer)
 
+store.subscribe(()=> {
+    localStorage.setItem('app-state', JSON.stringify(store.getState()))
+})
+
 type AppStoreType = typeof store

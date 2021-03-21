@@ -28,6 +28,6 @@ export const setValueFromLocalStorageAC = (value: number) => ({
 } as const)
 
 export type IncValuesActionType = ReturnType<typeof incValueAC>
-export type setValueFromLocalStorageActionType = ReturnType<typeof setValueFromLocalStorageAC>
+export type SetValueFromLocalStorageActionType = ReturnType<typeof setValueFromLocalStorageAC>
 
-type ActionType = IncValuesActionType | setValueFromLocalStorageActionType
+type ActionType = IncValuesActionType | SetValueFromLocalStorageActionType
