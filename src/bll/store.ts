@@ -7,7 +7,14 @@ const rootReducer = combineReducers({
 
 export type AppStateType = ReturnType<typeof rootReducer>
 
-export const store = createStore(rootReducer)
+let preloadedState
+
+const persistedTodoString = localStorage.getItem('app-state')
+if(persistedTodoString) {
+    preloadedState = JSON.parse(persistedTodoString)
+}
+
+export const store = createStore(rootReducer, preloadedState)
 
 store.subscribe(()=> {
     localStorage.setItem('app-state', JSON.stringify(store.getState()))
