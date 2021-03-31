@@ -1,0 +1,29 @@
+.App {
+
+}
+
+.counter {
+    border: 1px solid black;
+    width: 300px;
+    margin: 20px;
+    padding: 10px;
+    margin: 0 auto;
+
+}
+
+.value {
+    padding: 10px;
+
+}
+
+.inc {
+    border: 1px solid black;
+    padding: 10px;
+    margin: 5px;
+}
+
+.dec{
+    border: 1px solid black;
+    padding: 10px;
+    margin: 5px;
+}
